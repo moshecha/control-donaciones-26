@@ -16,8 +16,8 @@ app.use(express.static('public')); // Recursos estaticos
 app.set("view engine", "ejs")
 app.set('views', __dirname + '/src/views')  //Para cambiar de carpeta de views
 
-// const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
-// app.use(userLoggedMiddleware);
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
+app.use(userLoggedMiddleware);
 
 // esto es para put y delete
 const methodOverride = require('method-override');
