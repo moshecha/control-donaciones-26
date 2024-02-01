@@ -83,8 +83,9 @@ function validarEmail(valor) {
 
     // ***** verifico recapcha
     await grecaptcha.enterprise.ready(async () => {
-        const tokenRecapcha = await grecaptcha.enterprise.execute('6LcgDiopAAAAAA0xf-wdujzO8rWOt25-RTyiPBzl', {action: 'LOGIN'});
-    
+        // const tokenRecapcha = await grecaptcha.enterprise.execute('6LcgDiopAAAAAA0xf-wdujzO8rWOt25-RTyiPBzl', {action: 'LOGIN'});
+        const tokenRecapcha = await grecaptcha.enterprise.execute('6LeYbmIpAAAAAPklcozZY4agcs1RQ3jfNQWyqi48', {action: 'LOGIN'});
+
     // ** verifico ip y ubicación
     getIP().then(response => {
         userIP = response.ip;
@@ -179,8 +180,9 @@ function validarEmail(valor) {
     btnRegistrarme.disabled = true
 
     await grecaptcha.enterprise.ready(async () => {
-        const tokenRecapcha = await grecaptcha.enterprise.execute('6LcgDiopAAAAAA0xf-wdujzO8rWOt25-RTyiPBzl', {action: 'LOGIN'});
-    
+        // const tokenRecapcha = await grecaptcha.enterprise.execute('6LcgDiopAAAAAA0xf-wdujzO8rWOt25-RTyiPBzl', {action: 'LOGIN'});
+        const tokenRecapcha = await grecaptcha.enterprise.execute('6LeYbmIpAAAAAPklcozZY4agcs1RQ3jfNQWyqi48', {action: 'LOGIN'});
+
 
     const res = await fetch( '/api/apiRegistro', {
         method: 'POST',
