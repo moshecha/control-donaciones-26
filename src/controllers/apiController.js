@@ -75,7 +75,7 @@ const apiController = {
         let recapchaValid = funcionRecapcha.data.tokenProperties.valid
        // console.log( funcionRecapcha )
        if( !recapchaValid ){
-         return res.json({ ok: false, status: 'error', email: false, password: false, messaje: 'Robot Detectado', recapchaValid});
+         return res.json({ ok: false, status: 'error', email: false, password: false, messaje: 'Robot Detectado',tokenRecapcha, recapchaValid});
        }
     
         const result = await mongoDb.findDocuments('users', {email: email})
